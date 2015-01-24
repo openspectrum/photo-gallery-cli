@@ -17,6 +17,9 @@ end
 
 # run_test
 
-photo_file = ARGV[0]
+if __FILE__ == $PROGRAM_NAME
+  photo_file = ARGV[0]
+  abs_photo_path = absolute_path(photo_file)
 
-puts img_tag( absolute_path(photo_file) )
+  puts img_tag(abs_photo_path)
+end
